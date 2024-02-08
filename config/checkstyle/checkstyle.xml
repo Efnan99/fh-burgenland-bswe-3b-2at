@@ -59,6 +59,7 @@
                value="Consider using special escape sequence instead of octal value or Unicode escaped value."/>
     </module>
 
+
     <module name="MissingOverride">
       <property name="javaFiveCompatibility" value="true"/>
     </module>
