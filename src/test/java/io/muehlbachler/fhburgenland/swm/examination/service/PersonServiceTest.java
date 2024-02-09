@@ -1,4 +1,5 @@
 package io.muehlbachler.fhburgenland.swm.examination.service;
+
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
@@ -24,7 +25,9 @@ import io.muehlbachler.fhburgenland.swm.examination.controller.PersonController;
 import io.muehlbachler.fhburgenland.swm.examination.model.Note;
 import io.muehlbachler.fhburgenland.swm.examination.model.Person;
 
-
+/**
+ * Unit tests for the {@link PersonService} class.
+ */
 @SpringBootTest
 public class PersonServiceTest {
 

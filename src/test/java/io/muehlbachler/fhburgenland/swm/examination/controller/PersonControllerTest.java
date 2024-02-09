@@ -1,4 +1,5 @@
 package io.muehlbachler.fhburgenland.swm.examination.controller;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.ArgumentMatchers.any;
@@ -17,6 +18,10 @@ import org.springframework.http.ResponseEntity;
 import io.muehlbachler.fhburgenland.swm.examination.model.Person;
 import io.muehlbachler.fhburgenland.swm.examination.service.PersonService;
 
+/**
+ * Unit tests for the {@link PersonController} class.
+ */
+
 @SpringBootTest
 public class PersonControllerTest {
 
@@ -28,7 +33,8 @@ public class PersonControllerTest {
 
     @Test
     void testGetById() {
-        ResponseEntity<Person> person = personController.get("81150016-8501-4b97-9168-01113e21d8a5");
+        ResponseEntity<Person> person =
+                personController.get("81150016-8501-4b97-9168-01113e21d8a5");
 
         assertEquals(HttpStatus.OK, person.getStatusCode(), "Person should be found");
         assertEquals("Efo", person.getBody().getFirstName(), "First name should be Efo");
@@ -58,6 +64,7 @@ public class PersonControllerTest {
     /**
      * Test case to verify the creation of a person.
      */
+
     @Test
     void testCreate() {
         // Mock data
@@ -76,6 +83,7 @@ public class PersonControllerTest {
     /**
      * Test case to verify the querying of persons by name.
      */
+
     @Test
     void testQuery() {
         // Mock data
@@ -93,6 +101,7 @@ public class PersonControllerTest {
 
         assertNotNull(result, "Result should not be null");
         assertEquals(2, result.size(), "List should contain two persons");
-        assertEquals("Efo", result.get(0).getFirstName(), "First name of first person should be Efo");
+        assertEquals("Efo", result.get(0).getFirstName(),
+                "First name of first person should be Efo");
     }
 }
