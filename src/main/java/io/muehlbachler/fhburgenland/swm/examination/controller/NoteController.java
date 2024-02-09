@@ -16,7 +16,6 @@ import io.muehlbachler.fhburgenland.swm.examination.service.NoteService;
 /**
  * Controller for managing Note entities.
  */
-
 @RestController
 @RequestMapping("note")
 public class NoteController {
