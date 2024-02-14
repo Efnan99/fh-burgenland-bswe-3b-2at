@@ -120,4 +120,4 @@ jobs:
         run: ./gradlew bootJar
 
       - name: Log into GitHub Container Registry
-        run: echo ${{ secrets.CR_PAT }} | docker login ghcr.io --username ${{ github.actor }} --password-stdin
+        run: docker login ghcr.io --username ${{ github.actor }} --password "${{ secrets.CR_PAT }}"
